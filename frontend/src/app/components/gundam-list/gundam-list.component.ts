@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {GundamService} from '../../services/gundam.service';
 import {Gundam} from '../../common/gundam';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-gundam-list',
@@ -13,10 +14,13 @@ import {CommonModule, NgOptimizedImage} from '@angular/common';
 export class GundamListComponent implements OnInit {
 
   gundams: Gundam[] = [];
-  constructor(private gundamService: GundamService) {}
+  constructor(private gundamService: GundamService,
+              private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.listGundam();
+    this.route.paramMap.subscribe(() => {
+      this.listGundam();
+    });
   }
 
   private listGundam() {
