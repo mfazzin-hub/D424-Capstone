@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterModule, RouterOutlet} from '@angular/router';
 import {GundamListComponent} from './components/gundam-list/gundam-list.component';
+import {routes} from './app.routes';
 
 @Component({
   selector: 'app-root',
