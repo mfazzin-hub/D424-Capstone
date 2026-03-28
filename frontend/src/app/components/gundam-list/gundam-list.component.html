@@ -1,3 +1,21 @@
-<p *ngFor="let tempGundam of gundams">
-  {{tempGundam.name}}: {{tempGundam.grade}}
-</p>
+<div class="row">
+<div class="card-display col-lg-3 col-md-4 col-sm-6 mb-4" *ngFor="let tempGundam of gundams">
+  <div class="card shadow-sm">
+
+    <img
+      [src]="'assets/images/' + tempGundam.box_art"
+      alt="{{ tempGundam.name }}"
+      class="card card-img-top">
+    <div class="card-body">
+
+        <h4 class="card-title">{{tempGundam.grade}} {{tempGundam.name}}</h4>
+        <p class="card-text"><b>Release Year:</b> {{tempGundam.release_year}}</p>
+      <p class="card-text"><b>Anime: </b>{{tempGundam.series}} </p>
+
+
+    </div>
+  </div>
+</div>
+</div>
+
+<p>{{gundams.length}}</p>

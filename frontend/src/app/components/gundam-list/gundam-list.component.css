@@ -1,0 +1,23 @@
+.row {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #222831;
+}
+
+.card img {
+  padding-top: 10px;
+    height: 210px;
+    width: 100%;
+    object-fit: contain;
+  border-bottom: none;
+
+  }
+
+.card-text {
+  margin-bottom: 0px;
+}
+
+.card {
+  background-color: #31363F;
+  color: #EEEEEE;
+}

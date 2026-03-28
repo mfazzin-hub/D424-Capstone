@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {GundamService} from '../../services/gundam.service';
 import {Gundam} from '../../common/gundam';
-import { CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-gundam-list',
