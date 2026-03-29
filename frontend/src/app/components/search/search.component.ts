@@ -1,10 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
+import {Router, RouterLink} from '@angular/router';
 
 
 @Component({
   selector: 'app-search',
-  imports: [],
+  imports: [
+    RouterLink
+  ],
   standalone: true,
   templateUrl: './search.component.html',
   styleUrl: './search.component.css'

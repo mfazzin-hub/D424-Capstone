@@ -23,6 +23,10 @@ export class GundamService {
       map(response => response._embedded.gundams)
     )
   }
+
+  createGundam(gundam: any) {
+    return this.httpClient.post('http://localhost:8080/api/gundam', gundam);
+  }
 }
 
 interface GetResponse {
