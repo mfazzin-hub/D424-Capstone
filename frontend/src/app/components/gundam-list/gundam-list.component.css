@@ -2,6 +2,7 @@
   padding-left: 20px;
   padding-right: 20px;
   background-color: #222831;
+  margin: 0;
 }
 
 .card img {
@@ -20,4 +21,8 @@
 .card {
   background-color: #31363F;
   color: #EEEEEE;
+}
+
+.card-display {
+  min-height: 100%;
 }

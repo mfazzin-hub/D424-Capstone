@@ -1,9 +1,10 @@
 .header div {
-margin: 0px;
+margin: 0;
 }
 
 .header {
   background-color: #222831;
   margin: 0;
+  padding-left: 15px;
 }
 

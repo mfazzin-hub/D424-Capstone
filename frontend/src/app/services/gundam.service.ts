@@ -15,6 +15,14 @@ export class GundamService {
       map(response => response._embedded.gundams)
     )
   }
+
+  searchGundams(theKeyword: string): Observable<Gundam[]> {
+    const searchUrl = `${this.baseUrl}/search/findByNameContaining?name=${theKeyword}`;
+
+    return this.httpClient.get<GetResponse>(searchUrl).pipe(
+      map(response => response._embedded.gundams)
+    )
+  }
 }
 
 interface GetResponse {

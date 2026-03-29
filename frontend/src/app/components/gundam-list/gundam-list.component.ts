@@ -14,6 +14,7 @@ import {ActivatedRoute} from '@angular/router';
 export class GundamListComponent implements OnInit {
 
   gundams: Gundam[] = [];
+  searchMode: boolean = false;
   constructor(private gundamService: GundamService,
               private route: ActivatedRoute) {}
 
@@ -24,10 +25,32 @@ export class GundamListComponent implements OnInit {
   }
 
   private listGundam() {
+    this.searchMode = this.route.snapshot.paramMap.has('keyword')
+
+    if (this.searchMode) {
+      this.handleSearchGundam();
+    }
+    else {
+      this.handleListGundam();
+    }
+
+  }
+
+  handleListGundam() {
     this.gundamService.getGundamList().subscribe(
       data => {
         this.gundams = data;
       }
     )
+  }
+
+  handleSearchGundam() {
+    const theKeyword: string = this.route.snapshot.paramMap.get('keyword')!;
+    this.gundamService.searchGundams(theKeyword).subscribe(
+      data => {
+        this.gundams = data;
+      }
+    )
+
   }
 }
