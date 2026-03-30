@@ -15,5 +15,6 @@ public interface GundamRepository extends JpaRepository<Gundam, Integer> {
 
     Page<Gundam> findByNameContaining(@Param("name") String name, Pageable page);
 
+    Page<Gundam> findByGrade(@Param("grade") String grade, Pageable page);
 
 }

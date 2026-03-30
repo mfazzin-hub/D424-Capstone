@@ -13,11 +13,16 @@
 
 .input-group{
   height: 10px;
+  width: 600px;
   /*padding-right: 75%;*/
 
 }
 
 .btn-add {
   flex-shrink: 0;
-  margin-right: 60%
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
 }

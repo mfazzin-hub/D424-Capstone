@@ -16,6 +16,14 @@ export class GundamService {
     )
   }
 
+  getGundamListByGrade(grade: string): Observable<Gundam[]> {
+    const gradeURL = `${this.baseUrl}/search/findByGrade?grade=${grade}`;
+
+    return this.httpClient.get<GetResponse>(gradeURL).pipe(
+      map(response => response._embedded.gundams)
+    )
+  }
+
   searchGundams(theKeyword: string): Observable<Gundam[]> {
     const searchUrl = `${this.baseUrl}/search/findByNameContaining?name=${theKeyword}`;
 

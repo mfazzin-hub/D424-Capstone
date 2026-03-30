@@ -1,0 +1,22 @@
+<div class="container">
+<table class ="table">
+  <thead class="thread-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Grade</th>
+      <th scope="col">Release Year</th>
+      <th scope="col">Series</th>
+      <th scope="col">Report Date Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tempGundam of gundams">
+    <td>{{tempGundam.name}}</td>
+    <td>{{tempGundam.grade}}</td>
+    <td>{{tempGundam.release_year}}</td>
+    <td>{{tempGundam.series}}</td>
+    <td>{{ currentDateTime }}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
