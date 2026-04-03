@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/d424-software-engineering-capstone.iml" filepath="$PROJECT_DIR$/.idea/d424-software-engineering-capstone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/gunpla-viewer/gunpla-viewer.iml" filepath="$PROJECT_DIR$/backend/gunpla-viewer/gunpla-viewer.iml" />
     </modules>
   </component>
 </project>

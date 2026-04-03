@@ -7,8 +7,9 @@
 
 .card-bottom {
   display: flex;
-  justify-content: space-between;
-  margin-right: 10px;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 5px;
 
 }
 

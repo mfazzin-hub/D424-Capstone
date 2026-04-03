@@ -40,7 +40,13 @@ export class GundamService {
     const idUrl = `${this.baseUrl}/${id}`;
     return this.httpClient.delete(idUrl);
   }
+
+  updateGundam(gundam: any) {
+    const idUrl = `${this.baseUrl}/${gundam.id}`;
+    return this.httpClient.put(idUrl, gundam)
+  }
 }
+
 
 
 
