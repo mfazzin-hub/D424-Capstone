@@ -2,12 +2,12 @@ import {Component, OnInit} from '@angular/core';
 import {GundamService} from '../../services/gundam.service';
 import {Gundam} from '../../common/gundam';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-gundam-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './gundam-list.component.html',
   styleUrl: './gundam-list.component.css'
 })
@@ -52,5 +52,14 @@ export class GundamListComponent implements OnInit {
       }
     )
 
+  }
+
+  handleDeleteGundam(id: number) {
+    console.log(id)
+    this.gundamService.deleteGundam(id).subscribe({
+      next: () => {
+        this.listGundam();
+      }
+    });
   }
 }

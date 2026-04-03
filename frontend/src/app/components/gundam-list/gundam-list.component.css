@@ -5,6 +5,14 @@
   margin: 0;
 }
 
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10px;
+
+}
+
+
 .card img {
   padding-top: 10px;
     height: 210px;

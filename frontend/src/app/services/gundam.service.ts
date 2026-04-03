@@ -35,7 +35,14 @@ export class GundamService {
   createGundam(gundam: any) {
     return this.httpClient.post('http://localhost:8080/api/gundam', gundam);
   }
+
+  deleteGundam(id: number) {
+    const idUrl = `${this.baseUrl}/${id}`;
+    return this.httpClient.delete(idUrl);
+  }
 }
+
+
 
 interface GetResponse {
   _embedded: {

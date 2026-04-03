@@ -8,7 +8,10 @@
     <div class="card-body">
       <h4 class="card-title">{{tempGundam.grade}} {{tempGundam.name}}</h4>
       <p class="card-text"><b>Release Year:</b> {{tempGundam.release_year}}</p>
+      <div class="card-bottom">
       <p class="card-text"><b>Anime: </b>{{tempGundam.series}} </p>
+        <button (click)="handleDeleteGundam(+tempGundam.id)" class="btn btn-danger py-1 px-1 lh-1">Delete</button>
+      </div>
 
     </div>
   </div>
