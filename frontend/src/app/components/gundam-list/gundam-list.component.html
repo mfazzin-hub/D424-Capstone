@@ -10,7 +10,7 @@
       <p class="card-text"><b>Release Year:</b> {{tempGundam.release_year}}</p>
       <p class="card-text"><b>Anime: </b>{{tempGundam.series}} </p>
       <div class="card-bottom">
-        <button class="btn btn-light py-1 px-2 lh-1">Edit</button>
+        <button [routerLink]="['/edit', tempGundam.id]" class="btn btn-light py-1 px-2 lh-1">Edit</button>
         <button (click)="handleDeleteGundam(+tempGundam.id)" class="btn btn-danger py-1 px-1 lh-1">Delete</button>
       </div>
 

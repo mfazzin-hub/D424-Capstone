@@ -1,0 +1,17 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 30px;
+  gap: 5px;
+}
+
+input {
+  margin-bottom: 10px;
+  background-color: #EEEEEE;
+  border-radius: 5px;
+}
+
+button {
+  border-radius: 5px;
+}

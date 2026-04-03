@@ -1,0 +1,15 @@
+<form (ngSubmit)="editGundam()">
+
+    <label for="id">ID: </label>
+    <input [(ngModel)]="gundam.id" name="id" placeholder="Id" required readonly="true">
+  <label for="name">Name: </label>
+  <input [(ngModel)]="gundam.name" name="name" placeholder="Name" required>
+  <label for="grade">Grade: </label>
+  <input [(ngModel)]="gundam.grade" name="grade" placeholder="Grade">
+  <label for="release_year">Release Year: </label>
+  <input [(ngModel)]="gundam.release_year" name="release_year" type="number" placeholder="Year" required>
+  <label for="series">Series: </label>
+  <input [(ngModel)]="gundam.series" name="series" placeholder="Series">
+
+  <button type="Update">Add Gundam</button>
+</form>

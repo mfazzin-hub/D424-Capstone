@@ -45,7 +45,12 @@ export class GundamService {
     const idUrl = `${this.baseUrl}/${gundam.id}`;
     return this.httpClient.put(idUrl, gundam)
   }
+
+  getGundam(id: number) {
+    return this.httpClient.get<Gundam>(`${this.baseUrl}/${id}`);
+  }
 }
+
 
 
 
