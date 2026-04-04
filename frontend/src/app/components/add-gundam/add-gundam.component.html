@@ -1,8 +1,18 @@
 <form (ngSubmit)="addGundam()">
   <input [(ngModel)]="gundam.name" name="name" placeholder="Name" required>
-  <input [(ngModel)]="gundam.grade" name="grade" placeholder="Grade">
+<!--  <input [(ngModel)]="gundam.grade" name="grade" placeholder="Grade">-->
+  <select [(ngModel)]="gundam.grade" name="grade" required>
+    <option value="">Select Grade</option>
+    <option value="HG">HG</option>
+    <option value="RG">RG</option>
+    <option value="MG">MG</option>
+    <option value="PG">PG</option>
+  </select>
   <input [(ngModel)]="gundam.release_year" name="release_year" type="number" placeholder="Year" required>
   <input [(ngModel)]="gundam.series" name="series" placeholder="Series">
 
   <button type="submit">Add Gundam</button>
 </form>
+<div *ngIf="errorMessage" class="text-danger">
+  {{ errorMessage }}
+</div>
