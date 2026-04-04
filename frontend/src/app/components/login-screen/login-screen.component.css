@@ -1,0 +1,15 @@
+.login-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 90vh;
+  align-items: center;
+  gap: 10px;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

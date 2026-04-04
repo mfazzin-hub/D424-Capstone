@@ -1,0 +1,12 @@
+<div class="login-screen">
+  <h1>Gunpla Viewer</h1>
+  <form (ngSubmit)="checkLogin()">
+
+    <input [(ngModel)]="user.username" type="text" name="username" placeholder="Username">
+    <input [(ngModel)]="user.password"type=" password" name="password" placeholder="Password">
+    <button type="submit">Login</button>
+  </form>
+  <div *ngIf="errorMessage" class="text-danger">
+    {{ errorMessage }}
+  </div>
+</div>
