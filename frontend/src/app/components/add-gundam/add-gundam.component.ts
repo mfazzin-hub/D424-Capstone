@@ -7,7 +7,7 @@ import {NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-add-gundam',
-  imports: [FormsModule, RouterLink, NgIf],
+  imports: [FormsModule, NgIf],
   templateUrl: './add-gundam.component.html',
   styleUrl: './add-gundam.component.css'
 })

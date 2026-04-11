@@ -3,7 +3,7 @@
   <form (ngSubmit)="checkLogin()">
 
     <input [(ngModel)]="user.username" type="text" name="username" placeholder="Username">
-    <input [(ngModel)]="user.password"type=" password" name="password" placeholder="Password">
+    <input [(ngModel)]="user.password"type="password" name="password" placeholder="Password">
     <button type="submit">Login</button>
   </form>
   <div *ngIf="errorMessage" class="text-danger">
