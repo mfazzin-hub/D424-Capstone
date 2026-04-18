@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {map, Observable} from 'rxjs';
 import {Gundam} from '../common/gundam';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GundamService {
-  private baseUrl = "http://localhost:8080/api/gundam"
+  private baseUrl = `${environment.apiBaseUrl}/gundam`;
   constructor(private httpClient: HttpClient) { }
 
   getGundamList(): Observable<Gundam[]> {
